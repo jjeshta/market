@@ -1,0 +1,13 @@
+market_events.test:
+  path: '/test/event'
+  defaults:
+    _controller: Drupal\market_events\Controller\EventingController::createEvents
+  requirements:
+    _permission: 'access content'
+market_events.eventcreateform:
+  path: '/create/event'
+  defaults:
+    _form: '\Drupal\market_events\Form\CreateEventForm'
+    _title: 'Create an Event'
+  requirements:
+    _permission: 'access content'

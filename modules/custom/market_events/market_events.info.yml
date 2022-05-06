@@ -1,0 +1,5 @@
+name: Market Events
+description: A silly example eventing
+package: Custom services
+type: module
+core_version_requirement: ^8 || ^9

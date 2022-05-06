@@ -1,0 +1,5 @@
+name: Sandwich
+type: module
+description: Example module to learn the Plugin API
+package: Custom services
+core_version_requirement: ^8 || ^9

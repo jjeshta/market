@@ -1,0 +1,23 @@
+<?php
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter.
+ *
+ * Alters the display of a form
+ */
+function market_events_form_alter(&$form, FormStateInterface $form_state, $form_id)
+{
+
+    if ($form_id == 'create_event_form') {
+        $markup = '<div id="my-custom-markup"><h2>Add your upcoming event</h2></div>';
+
+        $form['field_mycustommarkup'] = [
+            '#type' => 'markup',
+            '#markup' => $markup,
+            //use #weight to move this field up and down on your form.
+            //check other forms' weights to find out, what weight to use.
+            '#weight' => -1,
+        ];
+    }
+}
